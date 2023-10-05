@@ -1,4 +1,6 @@
 @use '../constants/colors' as *;
+@use '../constants/_breakpoints.scss' as *;
+@use '../mixins/_media-queries.scss';
 
 $product-margin: 16px;
 
@@ -6,6 +8,7 @@ $product-margin: 16px;
   background-color: $white;
   border-bottom: 1px solid $light-gray;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0 $product-margin;
   padding: $product-margin 0;
@@ -27,24 +30,44 @@ $product-margin: 16px;
   display: flex;
   flex-direction: column;
   flex-grow: 2;
-  > p {
-    font-size: 18px;
-    max-width: 400px;
+
+   > p {
+    font-size: 3vw;
+  }
+
+  @include media-queries.respond-to($medium-screen){
+    > p {
+      font-size: 18px;
+      max-width: 400px;
+    }
   }
 }
 
 .product-location {
+  display: none;
   color: $secondary-gray;
   flex-grow: 2;
   font-size: 12px;
   margin-top: 32px;
+
+  @include media-queries.respond-to($medium-screen){
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .product-price {
   display: flex;
   align-items: center;
+
   > h3 {
-    font-size: 24px;
-    margin: 18px 4px 18px 0;
+    font-size: 4vw;
+  }
+  @include media-queries.respond-to($medium-screen){
+    > h3 {
+      font-size: 24px;
+      margin: 18px 4px 18px 0;
+    }
+    
   }
 }

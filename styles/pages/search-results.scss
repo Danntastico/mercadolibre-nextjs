@@ -16,9 +16,5 @@
   margin: 10px;
 }
 .mantine-Breadcrumbs-root {
-  flex-direction: column;
-  justify-content: flex-start;
-  @include media-queries.respond-to($medium-screen){
-    flex-direction: row; 
-  }
+  flex-wrap: wrap;
 }

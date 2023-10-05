@@ -43,8 +43,8 @@ export const SearchResultItem = (props) => {
         </Link>
         <p>{name}</p>
       </div>
-      <div style={{ minWidth: '200px' }}>
-        <p className='product-location'>{location}</p>
+      <div className='product-location' style={{ minWidth: '200px' }}>
+        <p>{location}</p>
       </div>
     </div>
   )
