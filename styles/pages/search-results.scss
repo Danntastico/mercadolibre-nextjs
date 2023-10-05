@@ -1,4 +1,6 @@
 @use '../constants/colors' as *;
+@use '../constants/_breakpoints.scss' as *;
+@use '../mixins/_media-queries.scss';
 
 .layout {
   margin: 30px 100px;
@@ -11,5 +13,12 @@
 
 .breadcrumbs-container {
   color: $primary-gray;
-  margin: 10px 0;
+  margin: 10px;
+}
+.mantine-Breadcrumbs-root {
+  flex-direction: column;
+  justify-content: flex-start;
+  @include media-queries.respond-to($medium-screen){
+    flex-direction: row; 
+  }
 }

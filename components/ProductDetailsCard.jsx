@@ -15,7 +15,6 @@ export default function ProductDetailsCard(
   }
 ) {
   const soldQuantityLabel = soldQuantity > 1 ? 'vendidos' : 'vendido'
-
   return (
     <div className="details-container">
       <section className="details-main">
@@ -26,18 +25,18 @@ export default function ProductDetailsCard(
             fill
           />
         </div>
-        <div className="details-description">
-          <h3>Descripción del producto</h3>
-          <p>{description}</p>
+        <div className="details-action">
+          <span>{productStatus} - {!!soldQuantity && `${soldQuantity} ${soldQuantityLabel}`}</span>
+          <h1>{name}</h1>
+          <h2>
+            {currencyFormatter(price, currency)}
+          </h2>
+          <Button>Comprar</Button>
         </div>
       </section>
-      <section className="details-action">
-        <span>{productStatus} - {soldQuantity} {soldQuantityLabel}</span>
-        <h1>{name}</h1>
-        <h2>
-          {currencyFormatter(price, currency)}
-        </h2>
-        <Button>Comprar</Button>
+      <section className="details-description">
+        <h3>Descripción del producto</h3>
+        <p>{description}</p>
       </section>
     </div>
   )

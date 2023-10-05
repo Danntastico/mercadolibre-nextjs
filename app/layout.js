@@ -5,7 +5,6 @@ import '@mantine/core/styles.css';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { SearchBar } from '@/containers';
 import { Suspense } from 'react';
-import Loading from './loading';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,9 +22,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <MantineProvider>
           <SearchBar />
-          <Suspense fallback={<Loading />}>
             {children}
-          </Suspense>
         </MantineProvider>
       </body>
     </html>
