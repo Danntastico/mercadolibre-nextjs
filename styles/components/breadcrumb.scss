@@ -1,0 +1,24 @@
+@use "../constants/colors" as *;
+@use "../mixins/alignment";
+@use "../constants/fontsizes";
+
+.breadcrumb-list{
+  list-style: none;
+  display: flex;
+  margin: 14px 0;
+  text-align: center;
+  .breadcrumb-item {
+    @include alignment.flex-center;
+
+    color: $secondary-gray;
+    font-size: fontsizes.$breadcrumb;
+
+    &[aria-current='page'] {
+      font-weight: bolder;
+    }
+
+    span {
+      font-size: 20px;
+    }
+  }
+}

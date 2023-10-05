@@ -1,0 +1,57 @@
+@use '../constants/colors' as *;
+
+$square-image-dimensions: 350px; 
+
+.details-container {
+  background-color: $white;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  padding: 32px; /* TODO */
+}
+
+.details-main {
+  display:flex;
+  flex-direction: column;
+}
+
+.image-container {
+  display: flex;
+  position: relative;
+  height: $square-image-dimensions;
+  > img {
+    object-fit: contain;
+  }
+}
+
+.details-description {
+  margin-top: 32px;
+  > h3 {
+    font-size: 28px; /* TODO */
+    margin-bottom: 14px; /* TODO */
+  }
+  > p {
+    color: $secondary-gray;
+    max-width: 680px;
+  }
+}
+
+.details-action {
+  flex: 2;
+  > span {
+    font-size: 14px; /* TODO */
+    margin-bottom: 16px; /* TODO */
+  }
+  > h1 {
+    font-size: 24px; /* TODO */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 10px; /* TODO */
+    width: 275px;
+  }
+  > h2 {
+    font-size: 46px; /* TODO */
+    font-weight: bold;
+    margin-bottom: 14px;
+  }
+}

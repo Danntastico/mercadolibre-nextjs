@@ -1,0 +1,71 @@
+@use '../constants/colors' as *;
+@use '../constants/_breakpoints.scss' as *;
+@use '../mixins/media-queries.scss';
+@use '../mixins/alignment';
+
+.topbar {
+  align-items: center;
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 20px;
+  .topbar-content {
+    @include alignment.layout-dimensions;
+    display: flex;
+    justify-content: space-between;
+    @include media-queries.respond-to($medium-screen){
+      min-width: 600px;
+      width: 1180px;
+    }
+  }
+}
+
+.topbar-search {
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0,0.2);
+  flex-grow: 2;
+  margin-left: 12px;
+}
+
+.topbar-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar-search-input {
+  border: none;
+  font-size: 18px;
+  margin: 8px;
+  width: 100%;
+}
+
+.topbar-search-button {
+  @include alignment.flex-center;
+  background: $light-gray;
+  border-radius: 0 4px 4px 0;
+  justify-content: center;
+  width: 46px;
+}
+.mantine-Autocomplete-root {
+  width: 100%;
+  flex-grow: 2;
+  padding-left: 12px;
+}
+.mantine-Autocomplete-wrapper, .mantine-Autocomplete-input  {
+  height: 100%!important;
+}
+
+.mantine-Autocomplete-input {
+  border: none!important;
+  border-radius: 4px 0px 0px 4px!important;
+}
+
+.mantine-Autocomplete-dropdown {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

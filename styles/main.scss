@@ -1,0 +1,52 @@
+@use './mixins/alignment';
+@use './constants/colors' as *;
+
+$input-border: none;
+$input-font-size: 18px;
+$input-outline: none;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: $light-gray;
+}
+
+main {
+  @include alignment.layout-dimensions;
+  margin-bottom: 100px;
+}
+
+button, input[type="submit"] {
+	border: $input-border;
+	color: inherit;
+	cursor: pointer;
+	font: inherit;
+	outline: $input-outline;
+	padding: 0;
+  background: none;
+}
+
+input {
+  border: $input-border;
+  font-size: $input-font-size;
+
+  &:focus-visible {
+    border: $input-border;
+    outline: none;   
+  }
+}
+
+p, h1, h2, h3, h4, ol, a {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: none;
+}

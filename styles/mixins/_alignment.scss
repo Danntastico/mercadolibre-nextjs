@@ -1,0 +1,9 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin layout-dimensions {
+  max-width: 1100px;
+  margin: auto;
+}

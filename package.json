@@ -1,0 +1,29 @@
+{
+  "name": "meli-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.1.0",
+    "@mantine/hooks": "^7.1.0",
+    "@tabler/icons-react": "^2.38.0",
+    "axios": "^1.5.1",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "swr": "^2.2.4"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "^8.4.31",
+    "postcss-preset-mantine": "^1.7.0",
+    "postcss-simple-vars": "^7.0.1",
+    "sass": "^1.68.0"
+  }
+}

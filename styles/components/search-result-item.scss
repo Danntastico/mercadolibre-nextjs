@@ -1,0 +1,50 @@
+@use '../constants/colors' as *;
+
+$product-margin: 16px;
+
+.product-card {
+  background-color: $white;
+  border-bottom: 1px solid $light-gray;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 $product-margin;
+  padding: $product-margin 0;
+}
+
+.product-cart-image-wrapper {
+  cursor: pointer;
+}
+
+.product-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-right: $product-margin;
+  border-radius: 4px;
+}
+
+.product-description {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  > p {
+    font-size: 18px;
+    max-width: 400px;
+  }
+}
+
+.product-location {
+  color: $secondary-gray;
+  flex-grow: 2;
+  font-size: 12px;
+  margin-top: 32px;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  > h3 {
+    font-size: 24px;
+    margin: 18px 4px 18px 0;
+  }
+}

@@ -1,0 +1,23 @@
+@use '../constants/colors' as *;
+.container {
+  align-items: center;
+  background-color: $darkest-gray;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 70px);
+  justify-content: center;
+
+ > h1 {
+    font-size: 4em;
+    font-weight: 700;
+    color: $primary-color;
+ }
+
+ > h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: $light-gray;
+  font-style: italic;
+  padding-bottom: 20px;
+ }
+}
